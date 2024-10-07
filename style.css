@@ -1,0 +1,81 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0e0e0; /* Light gray background */
+}
+
+.calculator {
+    background-color: #ffffff; /* White background for calculator */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Full width for small screens */
+    max-width: 400px; /* Max width for larger screens */
+    margin: 20px; /* Margin to prevent edge contact */
+}
+
+.display {
+    background-color: #f8f8f8; /* Light gray for the display */
+    color: #333; /* Dark text for visibility */
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc; /* Light border for the display */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    background-color: #50B498; /* Light teal button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #429b7a; /* Darker teal on hover */
+}
+
+button:active {
+    background-color: #367e67; /* Even darker on active */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .display {
+        font-size: 1.5em; /* Smaller font size for the display */
+    }
+
+    button {
+        padding: 15px; /* Reduce padding for buttons */
+        font-size: 1.2em; /* Smaller font size for buttons */
+    }
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 15px; /* Reduced padding for very small screens */
+    }
+
+    .display {
+        font-size: 1.3em; /* Further reduce font size for display */
+    }
+
+    button {
+        padding: 10px; /* Further reduce padding for buttons */
+        font-size: 1em; /* Smaller font size for buttons */
+    }
+}
